@@ -1,0 +1,72 @@
+<section>
+    <div>
+        <h4>Search User</h4>
+    </div>
+    <div fxLayout="row" fxLayoutGap="10px" fxLayout.sm="column" class="container">
+        <div fxFlex="0 0 auto" fxLayoutAlign="start">
+            <mat-form-field class="input-full-width" floatLabel="never">
+                <input matInput [(ngModel)]="name">
+              </mat-form-field>
+            
+          </div>
+          <div fxLayoutAlign="start">
+            <button mat-flat-button color="primary" style="height: 35px;" (click)="onSubmit()">search</button>
+          </div>
+
+    </div>
+    <div *ngIf="show">
+    <div>
+        <span>Name :</span>
+        <span>{{this.data.name || ''}}</span>
+    </div>
+    <div>
+        <span>Login :</span>
+        <span>{{this.data.login || ''}}</span>
+    </div>
+
+    <div>
+        <span>Company :</span>
+        <span>{{this.data.company || ''}}</span>
+    </div>
+
+    <div>
+        <span>Email :</span>
+        <span>{{this.data.email || ''}}</span>
+    </div><div>
+        <span>Twitter User Name :</span>
+        <span>{{this.data.twitter_username || ''}}</span>
+    </div>
+    <div>
+        <span>Location :</span>
+        <span>{{this.data.location || ''}}</span>
+    </div>
+    <div>
+        <span>Followers :</span>
+        <span>{{this.data.followers || ''}}</span>
+    </div>
+    <div>
+        <span>Following :</span>
+        <span>{{this.data.following || ''}}</span>
+    </div>
+    <div>
+        <span>Url :</span>
+        <span>{{this.data.url || ''}}</span>
+    </div>
+    <div>
+        <span>Created Date :</span>
+        <span>{{this.data.created_at | date:'yyyy-MM-dd' || ''}}</span>
+    </div>
+    <div>
+        <span>Updated Date :</span>
+        <span>{{this.data.updated_at | date:'yyyy-MM-dd' || ''}}</span>
+    </div>
+    <div>
+        <span>Public Gists :</span>
+        <span>{{this.data.public_gists || ''}}</span>
+    </div>
+    <div>
+        <span>Organizations Url :</span>
+        <span>{{this.data.organizations_url || ''}}</span>
+    </div>
+</div>
+</section>

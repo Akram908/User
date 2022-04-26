@@ -1,0 +1,15 @@
+<div class="sidebar_menu" [@onSideNavChange]="sidebarState">
+    <mat-nav-list class="menu-list">
+      
+      <a mat-list-item routerLinkActive="active-list-item" routerLink="search" title="Dashboard">
+        <mat-icon class="icon" [@iconAnimation]="sidebarState">search</mat-icon>
+        <span class="label" [@labelAnimation]="sidebarState">Search</span>
+      </a>
+      <mat-divider></mat-divider>
+      <a mat-list-item routerLinkActive="active-list-item" routerLink="history" title="Work">
+        <mat-icon class="icon" [@iconAnimation]="sidebarState">history</mat-icon>
+        <span class="label" [@labelAnimation]="sidebarState">History</span>
+      </a>
+     
+    </mat-nav-list>
+  </div>
