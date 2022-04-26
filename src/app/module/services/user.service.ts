@@ -1,13 +1,13 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, catchError, Subject, throwError } from 'rxjs';
-import { environment } from 'src/environments/environment.prod';
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserService {
-    api: string = environment.baseUrl;
+    api: string = 'https://api.github.com/';
     searchData:BehaviorSubject<any> = new BehaviorSubject<any>([]);;
     searchData$ = this.searchData.asObservable();
     nameData:BehaviorSubject<any> = new BehaviorSubject<any>([]);;
