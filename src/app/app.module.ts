@@ -14,6 +14,10 @@ import { FormsModule } from '@angular/forms';
 import { HistoryComponent } from './module/history/history.component';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
+import { MatButtonModule } from '@angular/material/button';
+import { MatStepperModule } from '@angular/material/stepper';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 
 @NgModule({
   declarations: [
@@ -26,13 +30,17 @@ import { MatNativeDateModule } from '@angular/material/core';
     AppRoutingModule,
     BrowserAnimationsModule,
     RouterModule,
+    MatButtonModule,
+    MatStepperModule,
+    MatFormFieldModule,
+    MatInputModule,
     FlexLayoutModule,
     MaterialModule,
     MainLayoutModule,
     HttpClientModule,
     FormsModule,
     MatDatepickerModule, 
-    MatNativeDateModule
+    MatNativeDateModule 
   ],
   providers: [],
   bootstrap: [AppComponent],
