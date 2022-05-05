@@ -12,6 +12,8 @@ import { SearchUserComponent } from './module/search-user/search-user.component'
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { HistoryComponent } from './module/history/history.component';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { HistoryComponent } from './module/history/history.component';
     MaterialModule,
     MainLayoutModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    MatDatepickerModule, 
+    MatNativeDateModule
   ],
   providers: [],
   bootstrap: [AppComponent],
