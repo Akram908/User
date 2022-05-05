@@ -14,7 +14,6 @@ export class HistoryComponent implements OnInit {
   ngOnInit(): void {
     this.userservice.searchData$.subscribe(val => {
       this.data = val
-      //console.log("--------",this.data)
     })
   }
 
@@ -22,12 +21,14 @@ export class HistoryComponent implements OnInit {
     let data:any;
         data = [];
     this.userservice.changeMessage(data)
+    this.userservice.changeName('')
   }
 
   onsearch(val:any){
     console.log(val);
     //sessionStorage.setItem('name',val.name)
-    this.userservice.changeMessage(val.name)
+    this.userservice.changeName(val.name);
+    this.userservice.changeMessage(this.data)
     this.router.navigate(['/search']);
   }
 }

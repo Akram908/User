@@ -8,10 +8,10 @@ import { BehaviorSubject, catchError, Subject, throwError } from 'rxjs';
 })
 export class UserService {
     api: string = 'https://api.github.com/';
-    searchData:BehaviorSubject<any> = new BehaviorSubject<any>([]);;
+    searchData:BehaviorSubject<any> = new BehaviorSubject<any>([]);
     searchData$ = this.searchData.asObservable();
-    nameData:BehaviorSubject<any> = new BehaviorSubject<any>([]);;
-    nameData$ = this.searchData.asObservable();
+    nameData:BehaviorSubject<any> = new BehaviorSubject<string>('');
+    nameData$ = this.nameData.asObservable();
 
   constructor(private http: HttpClient) {}
 
@@ -24,7 +24,7 @@ export class UserService {
   }
 
   changeName(message: any) {
-    this.searchData.next(message)
+    this.nameData.next(message)
   }
 
   handleError(error: any) {
